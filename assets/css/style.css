@@ -1871,10 +1871,10 @@ a {
   display: inline-block;
   margin-bottom: 15px;
   position: relative;
-  padding-left: 65px; }
+  padding-left: 350px; }
   .counter-up-area .single-counter .count-content span:before {
     position: absolute;
-    left: 0px;
+    left: 410px;
     top: 27px;
     content: "";
     height: 3px;
@@ -1887,6 +1887,7 @@ a {
   line-height: 33px;
   font-weight: 600;
   margin-bottom: 0;
+  margin-left: 350px;
   text-transform: capitalize; }
 
 /*4.2 Generel Information Area*/
