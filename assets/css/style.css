@@ -1875,6 +1875,10 @@ a {
   .counter-up-area .single-counter .count-content span:before {
     position: absolute;
     left: 350px;
+  padding-left: 350px; }
+  .counter-up-area .single-counter .count-content span:before {
+    position: absolute;
+    left: 410px;
     top: 27px;
     content: "";
     height: 3px;
