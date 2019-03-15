@@ -338,7 +338,8 @@ html .ui-button.ui-state-disabled:active {
   width: 100%; }
 
 .row .no-gutter {
-  margin-left: 12.666667%; }
+  margin-left: 12.666667%;
+  }
 
 /*contact form*/
 .help-block,
@@ -1536,7 +1537,6 @@ a {
   .our-blog-area .owl-theme .owl-nav .owl-next {
     right: auto;
     left: -46%; }
-
 /*3.8 Contact Us Area*/
 .contact-us-area.about .icon-box {
   display: flow-root; }
@@ -1875,11 +1875,12 @@ a {
   line-height: 60px;
   display: inline-block;
   margin-bottom: 15px;
+
   position: relative;
-  padding-left: 410px; }
+  padding-left: 65px; }
   .counter-up-area .single-counter .count-content span:before {
     position: absolute;
-    left: 350px;
+    left: 0px;
     top: 27px;
     content: "";
     height: 3px;
@@ -1892,9 +1893,8 @@ a {
   line-height: 33px;
   font-weight: 600;
   margin-bottom: 0;
-  margin-left: 350px;
   text-transform: capitalize; }
-  
+
 /*4.2 Generel Information Area*/
 .generel-information-area {
   position: relative; }
