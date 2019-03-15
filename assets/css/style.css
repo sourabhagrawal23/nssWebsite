@@ -42,6 +42,8 @@ Author Email: ithemeslab@gmail.com */
 */
 /*google fonts*/
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700");
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+@import url('https://fonts.googleapis.com/css?family=Monoton');
 /* 1.1  global & override */
 body {
   font-family: "Poppins", sans-serif;
@@ -50,6 +52,9 @@ body {
   line-height: 25px;
   -webkit-backface-visibility: hidden; }
 
+.hero-text{
+  font-family: 'Monoton', cursive;
+}
 ::-moz-selection {
   background: #4125dd;
   color: #fff;
@@ -1889,7 +1894,7 @@ a {
   margin-bottom: 0;
   margin-left: 350px;
   text-transform: capitalize; }
-
+  
 /*4.2 Generel Information Area*/
 .generel-information-area {
   position: relative; }
