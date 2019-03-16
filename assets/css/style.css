@@ -323,7 +323,7 @@ html .ui-button.ui-state-disabled:active {
   bottom: 26px;
   background: url(../img/up.png);
   background-repeat: no-repeat;
-  height: 50px;
+  height: 100px;
   position: fixed;
   background-size: cover;
   right: 50px;
@@ -603,11 +603,16 @@ a {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 2; }
+  z-index: 2;
+  }
+  
+ 
   .header .navbar {
     padding: 0; }
+	 
   .header .navbar-header {
     margin-top: 18px; }
+	
   .header .navbar-toggler-icon {
     background-color: #01292f; }
   .header .navbar-toggler {

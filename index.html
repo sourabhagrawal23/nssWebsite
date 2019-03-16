@@ -17,7 +17,7 @@
     <link rel="apple-touch-icon" sizes="144x144" href="assets/favicon/apple-icon-144x144.png">
 
     <!--All Css Here-->
-
+	<link rel="stylesheet" href="modal.css">
     <!--Bootstrap Css-->
     <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
     <!--Font-Awesome Css-->
@@ -40,20 +40,99 @@
     <link rel="stylesheet" href="assets/css/responsive.css">
     <!--Modernizr Css-->
     <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
-
+	<!--Header Active-->
+    <script src="headeractive.js"></script>
 
     <!--[if lt IE 9]>
         <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
 	<style>
-	html {
+html {
 		scroll-behavior: smooth;
 	}
-	</style>
+</style>
+															
+															<style>
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: #007bff;
+  color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #007bff;
+  color: white;
+}
+</style>
+
 </head>
 
 <body>
+
+
     <!--Preloder-->
     <div class='loader'>
         <div class='loader--dot'></div>
@@ -202,7 +281,7 @@
             <!-- /container end-->
         </div>
         <!--Hero Banner Area End Here-->
-
+		
         <!--Conference Synopsis Area Start Here-->
 		<A name="knowmore">
         <div class="conference-synopsis-area pad100">
@@ -262,6 +341,7 @@
                             </li>
                     
                         </ul>
+						
                         <div class="tab-content" id="myTabContent">
                             <div class="tab-pane fade show active" id="home" role="tabpanel">
                                 <div class="table-responsive">
@@ -311,22 +391,33 @@
                                                             <a class="btn btn-primary" href="http://bit.ly/nssaaghaaz" role="button" aria-expanded="false" aria-controls="collapseExample">
                                                               Register
                                                             </a>
-                                                            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample">
+                                                            <button id="rm1" class="btn btn-primary" type="button" >
                                                               Read More
                                                             </button>
-                                                        </p>
-                                                        <div class="collapse" id="collapseExample1">
-                                                            <div class="card card-body">
-                                                                    ●  Marathon on the theme of Say no to Drugs will start from KSAC ground<br>
-                                                                    ●  Attendees: 200 (approx) (Refreshment for each participant worth Rs. 10)<br>
-                                                                    <strong>Prize worth - 2000/-</strong>                                                                   
-                                                            </div>
-                                                        </div>
-                                                          
-                                                    
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      
+    </div>
+    <div class="modal-body">
+      ● Marathon on the theme of Say no to Drugs will start from KSAC ground<br>
+      ● Attendees: 200 (approx) (Refreshment for each participant worth Rs. 10) <br>
+	  <b>Prize worth - 2000/-</b>
+    </div>
+    <div class="modal-footer">
+      <h3>Marathon</h3>
+    </div>
+  </div>
+</div>
+<!--modal ends-->
+                                                       
                                                     </td>
                                             
-                                            </tr>
+                           </tr>
                                             <tr class="inner-box">
                                                 <th scope="row">
                                                     <div class="event-date">
@@ -362,18 +453,33 @@
                                                         <a class="btn btn-primary" href="http://bit.ly/nssaaghaaz" role="button" aria-expanded="false" aria-controls="collapseExample">
                                                             Register
                                                         </a>
-                                                        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample">
-                                                            Read More
-                                                        </button>
-                                                    </p>
-                                                    <div class="collapse" id="collapseExample2">
-                                                        <div class="card card-body">
-                                                            ●  A situation will be given to two teams. They will have to extract out the information and give a proper conclusion to the problem. First team to do it will advance in every round.<br>
-                                                            ●  Competition will keep on going until a single team remains.<br>
-                                                            ●  This will be conducted in teams of 5<br>
-                                                            <strong>Prize worth - 2000/-</strong>
-                                                        </div>
-                                                    </div>
+                                                            <button id="rm2" class="btn btn-primary" type="button" >
+                                                              Read More
+                                                            </button>
+
+<!-- The Modal 2-->
+<div id="myModal1" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      
+    </div>
+    <div class="modal-body">
+      ● A situation will be given to two teams. They will have to extract out the information and give a proper conclusion to the problem. First team to do it will advance in every round.
+	  <br>
+● Competition will keep on going until a single team remains.
+<br>
+● This will be conducted in teams of 5
+<br>
+<b>Prize worth - 2000/-</b>
+    </div>
+    <div class="modal-footer">
+      <h3>Social Case Study</h3>
+    </div>
+  </div>
+</div>
+<!--modal 2 ends-->
                                                 </td>
                                             </tr>
                                             <tr class="inner-box border-bottom-0">
@@ -411,15 +517,28 @@
                                                         <a class="btn btn-primary" href="http://bit.ly/nssaaghaaz" role="button" aria-expanded="false" aria-controls="collapseExample">
                                                             Register
                                                         </a>
-                                                        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample">
-                                                            Read More
-                                                        </button>
-                                                    </p>
-                                                    <div class="collapse" id="collapseExample3">
-                                                        <div class="card card-body">
-                                                            ●  Nukkads will be performed by NSS SCE volunteers depicting the social problems in India.<br>
-                                                        </div>
-                                                    </div>
+														 <button id="rm3" class="btn btn-primary" type="button" >
+                                                              Read More
+                                                            </button>
+
+<!-- The Modal -->
+<div id="myModal2" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      
+    </div>
+    <div class="modal-body">
+       ●  Nukkads will be performed by NSS SCE volunteers depicting the social problems in India.
+    </div>
+    <div class="modal-footer">
+      <h3>Social Nukkad and Flash Mob</h3>
+    </div>
+  </div>
+</div>
+<!--modal ends-->
+                                                   
                                                 </td>
                                             </tr>
                                         </tbody>
@@ -474,17 +593,29 @@
                                                                 <a class="btn btn-primary" href="http://bit.ly/nssaaghaaz" role="button" aria-expanded="false" aria-controls="collapseExample">
                                                                     Register
                                                                 </a>
-                                                                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample4" aria-expanded="false" aria-controls="collapseExample">
-                                                                    Read More
-                                                                </button>
-                                                            </p>
-                                                            <div class="collapse" id="collapseExample4">
-                                                                <div class="card card-body">
-                                                                        ●  Conducting an event related to art and craft where the participants will create any form of art piece, craft item (card, flower bouquet etc.) which will be collected and donated to the orphanages and old-age homes we visit under the theme of “art of giving”. Out of all creations winner will be awarded.<br>
+                                                                <button id="rm4" class="btn btn-primary" type="button" >
+                                                              Read More
+                                                            </button>
+
+<!-- The Modal -->
+<div id="myModal3" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      
+    </div>
+    <div class="modal-body">
+       ●  Conducting an event related to art and craft where the participants will create any form of art piece, craft item (card, flower bouquet etc.) which will be collected and donated to the orphanages and old-age homes we visit under the theme of “art of giving”. Out of all creations winner will be awarded.<br>
                                                                         ●  Copies from Project Daan will be given.<br>
-                                                                        <strong>Prize worth - 2000/-</strong>                                                                        
-                                                                </div>
-                                                            </div>
+                                                                        <strong>Prize worth - 2000/-</strong>   
+    </div>
+    <div class="modal-footer">
+      <h3>Art Of Giving</h3>
+    </div>
+  </div>
+</div>
+<!--modal ends-->
                                                 </td>
                                             </tr>
                                             <tr class="inner-box">
@@ -522,16 +653,32 @@
                                                                 <a class="btn btn-primary" href="http://bit.ly/nssaaghaaz" role="button" aria-expanded="false" aria-controls="collapseExample">
                                                                     Register
                                                                 </a>
-                                                                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample5" aria-expanded="false" aria-controls="collapseExample">
-                                                                    Read More
-                                                                </button>
-                                                            </p>
-                                                            <div class="collapse" id="collapseExample5">
-                                                                <div class="card card-body">
-                                                                    ● Individually an on-spot topic will be given, participants have to speak for or against the topic in 3-5 mins.<br> 
-                                                                    <strong>Prize worth - 2000/-</strong>
-                                                                </div>
-                                                            </div>
+																   <button id="rm5" class="btn btn-primary" type="button" >
+                                                              Read More
+                                                            </button>
+
+<!-- The Modal -->
+<div id="myModal4" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      
+    </div>
+    <div class="modal-body">
+        ● Individually an on-spot topic will be given, participants have to speak for or against the topic in 3-5 mins.<br> 
+        <strong>Prize worth - 2000/-</strong>
+                                                                  
+    </div>
+    <div class="modal-footer">
+      <h3>Turncoat debate</h3>
+    </div>
+  </div>
+</div>
+<!--modal ends-->
+
+
+                                                           
                                                 </td>
                                             </tr>
                                             <tr class="inner-box border-bottom-0">
@@ -569,19 +716,32 @@
                                                                 <a class="btn btn-primary" href="http://bit.ly/nssaaghaaz" role="button" aria-expanded="false" aria-controls="collapseExample">
                                                                     Register
                                                                 </a>
-                                                                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample6" aria-expanded="false" aria-controls="collapseExample">
-                                                                    Read More
-                                                                </button>
-                                                            </p>
-                                                            <div class="collapse" id="collapseExample6">
-                                                                <div class="card card-body">
-                                                                    ●  Theme for this event is Women Empowerment.<br>
+																	   <button id="rm6" class="btn btn-primary" type="button" >
+                                                              Read More
+                                                            </button>
+
+<!-- The Modal -->
+<div id="myModal5" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      
+    </div>
+    <div class="modal-body">
+        ●  Theme for this event is Women Empowerment.<br>
                                                                     ●  In this competition participants can participate individually or in groups.<br>
                                                                     ●  Participants will get a particular duration to perform their piece<br>
                                                                     ●  The participants can present/perform paintings, dance, drama, nukkad etc.<br>                                                                        
                                                                     <strong>Prize worth - 2000/-</strong>
-                                                                </div>
-                                                            </div>
+                                                                  
+    </div>
+    <div class="modal-footer">
+      <h3>KiiT's Got Talent</h3>
+    </div>
+  </div>
+</div>
+<!--modal ends-->
                                                 </td>
                                             </tr>
                                             <tr class="inner-box">
@@ -619,17 +779,30 @@
                                                                 <a class="btn btn-primary" href="http://bit.ly/nssaaghaaz" role="button" aria-expanded="false" aria-controls="collapseExample">
                                                                     Register
                                                                 </a>
-                                                                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample7" aria-expanded="false" aria-controls="collapseExample">
-                                                                    Read More
-                                                                </button>
-                                                            </p>
-                                                            <div class="collapse" id="collapseExample7">
-                                                                <div class="card card-body">
-                                                                    ●  The hackathon will be based on the topic 'Cleanliness Solutions'.<br>
-                                                                    ●  A problem will be given to the participants on the above topic and they need to find the best feasible solution.<br>                                                                        
+																			   <button id="rm7" class="btn btn-primary" type="button" >
+                                                              Read More
+                                                            </button>
+
+<!-- The Modal -->
+<div id="myModal6" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      
+    </div>
+    <div class="modal-body">
+       ●  The hackathon will be based on the topic 'Cleanliness Solutions'.<br>
+                                                                    ●  A problem will be given to the participants on the above topic and they need to find the best feasible solution.<br>                                                                     
                                                                     <strong>Prize worth - 2000/-</strong>
-                                                                </div>
-                                                            </div>
+                                                                  
+    </div>
+    <div class="modal-footer">
+      <h3>Hackathon</h3>
+    </div>
+  </div>
+</div>
+<!--modal ends-->
                                                 </td>
                                             </tr>
                                             <tr class="inner-box">
@@ -667,18 +840,31 @@
                                                                 <a class="btn btn-primary" href="http://bit.ly/nssaaghaaz" role="button" aria-expanded="false" aria-controls="collapseExample">
                                                                     Register
                                                                 </a>
-                                                                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample8" aria-expanded="false" aria-controls="collapseExample">
-                                                                    Read More
-                                                                </button>
-                                                            </p>
-                                                            <div class="collapse" id="collapseExample8">
-                                                                <div class="card card-body">
-                                                                    ●  Aim of this event is to support orphanage children.<br> 
+	
+	<button id="rm8" class="btn btn-primary" type="button" >
+                                                              Read More
+                                                            </button>
+
+<!-- The Modal -->
+<div id="myModal7" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      
+    </div>
+    <div class="modal-body">
+        ●  Aim of this event is to support orphanage children.<br> 
                                                                     ●  Teams will be given a set of products and they need to sell max products with max profits, accordingly winner will be chosen.<br>
                                                                     ●  The products which are to be sold will be made by orphanage children and the profit gain will be denoted to the orphanages.<br>                                                                        
                                                                     <strong>Prize worth - 2000/-</strong>
                                                                 </div>
-                                                            </div>
+    <div class="modal-footer">
+      <h3>Marketing</h3>
+    </div>
+  </div>
+</div>
+<!--modal ends-->
                                                 </td>
                                             </tr>
                                             <tr class="inner-box">
@@ -716,16 +902,30 @@
                                                                 <a class="btn btn-primary" href="http://bit.ly/nssaaghaaz" role="button" aria-expanded="false" aria-controls="collapseExample">
                                                                     Register
                                                                 </a>
-                                                                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample9" aria-expanded="false" aria-controls="collapseExample">
-                                                                    Read More
-                                                                </button>
-                                                            </p>
-                                                            <div class="collapse" id="collapseExample9">
-                                                                <div class="card card-body">
-                                                                    ●  In this competition initially clues will be given on social issues to each team and they have to find the other clue till they find the final treasure.<br>
+	<button id="rm9" class="btn btn-primary" type="button" >
+                                                              Read More
+                                                            </button>
+
+<!-- The Modal -->
+<div id="myModal8" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      
+    </div>
+    <div class="modal-body">
+        ●  In this competition initially clues will be given on social issues to each team and they have to find the other clue till they find the final treasure.<br>
                                                                     <strong>Prize worth - 2000/-</strong>
-                                                                </div>
-                                                            </div>
+                                                                  
+    </div>
+    <div class="modal-footer">
+      <h3>Treasure Hunt</h3>
+    </div>
+  </div>
+</div>
+<!--modal ends-->
+                                                              
                                                 </td>
                                             </tr>
                                             <tr class="inner-box">
@@ -763,20 +963,35 @@
                                                                 <a class="btn btn-primary" href="http://bit.ly/nssaaghaaz" role="button" aria-expanded="false" aria-controls="collapseExample">
                                                                     Register
                                                                 </a>
-                                                                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample10" aria-expanded="false" aria-controls="collapseExample">
-                                                                    Read More
-                                                                </button>
-                                                            </p>
-                                                            <div class="collapse" id="collapseExample10">
-                                                                <div class="card card-body">
-                                                                    ● CS go and Rainbow six siege hubs will be organised.<br> 
+	
+	<button id="rm10" class="btn btn-primary" type="button" >
+                                                              Read More
+                                                            </button>
+
+<!-- The Modal -->
+<div id="myModal9" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      
+    </div>
+    <div class="modal-body">
+        ● CS go and Rainbow six siege hubs will be organised.<br> 
                                                                     ● Teams participating in this event have to bring in their own laptops.<br>
                                                                     ● Competition will be based on Direct Elimination.<br>
                                                                     ● CS and Rainbow:-<br>
                                                                         ● Teams will play head-to-head matches, all of them will be knockouts.<br>                                                                        
                                                                     <strong>Prize worth - 2000/-</strong>
-                                                                </div>
-                                                            </div>
+                                                                  
+    </div>
+    <div class="modal-footer">
+      <h3>Fun Games</h3>
+    </div>
+  </div>
+</div>
+<!--modal ends-->
+     
                                                 </td>
                                             </tr>
                                             <tr class="inner-box">
@@ -814,19 +1029,33 @@
                                                                 <a class="btn btn-primary" href="http://bit.ly/nssaaghaaz" role="button" aria-expanded="false" aria-controls="collapseExample">
                                                                     Register
                                                                 </a>
-                                                                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample11" aria-expanded="false" aria-controls="collapseExample">
-                                                                    Read More
-                                                                </button>
-                                                            </p>
-                                                            <div class="collapse" id="collapseExample11">
-                                                                <div class="card card-body">
-                                                                    ●  This competition will be open for all.<br>
+	
+	<button id="rm11" class="btn btn-primary" type="button" >
+                                                              Read More
+                                                            </button>
+
+<!-- The Modal -->
+<div id="myModal10" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      
+    </div>
+    <div class="modal-body">
+         ●  This competition will be open for all.<br>
                                                                     ●  Participants will have to upload their pictures on FB/Insta using #EventName.<br>
                                                                     ●  Theme will be announced before competition. (Themes will be based on social issues).<br>
                                                                     ●  Top 3 pictures will be selected.( Pictures will be Judged  on the basis of content, theme, uniqueness 70% marks, + likes and share 30% marks).<br>                                                                        
                                                                     <strong>Prize worth - 2000/-</strong>
-                                                                </div>
-                                                            </div>
+                                                                  
+    </div>
+    <div class="modal-footer">
+      <h3>PixForChange</h3>
+    </div>
+  </div>
+</div>
+<!--modal ends-->
                                                 </td>
                                             </tr>
                                         </tbody>
@@ -1063,12 +1292,6 @@
                                     <li><a href="https://www.instagram.com/nss.cs.it/"><i class="fa fa-instagram"></i></a></li>
                                 </ul>
                             </div>
-					<div class="col-lg-5">
-                        <div class="am">
-                           
-                            <div class="border-left"></div>
-                        </div>
-                    </div>
                         </div>
                     </div>
                     <!-- /col end-->
@@ -1133,6 +1356,90 @@ function scrollFunction() {
   } else {
     document.getElementById("navbar").style.padding = "80px 10px";
     document.getElementById("logo").style.fontSize = "35px";
+  }
+}
+</script>
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+var modal1 = document.getElementById('myModal1');
+var modal2 = document.getElementById('myModal2');
+var modal3 = document.getElementById('myModal3');
+var modal4 = document.getElementById('myModal4');
+var modal5 = document.getElementById('myModal5');
+var modal6 = document.getElementById('myModal6');
+var modal7 = document.getElementById('myModal7');
+var modal8 = document.getElementById('myModal8');
+var modal9 = document.getElementById('myModal9');
+var modal10 = document.getElementById('myModal10');
+// Get the button that opens the modal
+var btn = document.getElementById("rm1");
+var btn1 = document.getElementById("rm2");
+var btn2 = document.getElementById("rm3");
+var btn3 = document.getElementById("rm4");
+var btn4 = document.getElementById("rm5");
+var btn5 = document.getElementById("rm6");
+var btn6 = document.getElementById("rm7");
+var btn7 = document.getElementById("rm8");
+var btn8 = document.getElementById("rm9");
+var btn9 = document.getElementById("rm10");
+var btn10 = document.getElementById("rm11");
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+btn1.onclick = function() {
+  modal1.style.display = "block";
+}
+btn2.onclick = function() {
+  modal2.style.display = "block";
+}
+btn3.onclick = function() {
+  modal3.style.display = "block";
+}
+btn4.onclick = function() {
+  modal4.style.display = "block";
+}
+btn5.onclick = function() {
+  modal5.style.display = "block";
+}
+btn6.onclick = function() {
+  modal6.style.display = "block";
+}
+btn7.onclick = function() {
+  modal7.style.display = "block";
+}
+btn8.onclick = function() {
+  modal8.style.display = "block";
+}
+btn9.onclick = function() {
+  modal9.style.display = "block";
+}
+btn10.onclick = function() {
+  modal10.style.display = "block";
+}
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal || event.target == modal1 || event.target == modal2 || event.target == modal3 || event.target == modal4 || event.target == modal5 || event.target == modal6 || event.target == modal7 || event.target == modal8 || event.target == modal9 || event.target == modal10) {
+    modal.style.display = "none";
+	modal1.style.display = "none";
+	modal2.style.display = "none";
+	modal3.style.display = "none";
+	modal4.style.display = "none";
+	modal5.style.display = "none";
+	modal6.style.display = "none";
+	modal7.style.display = "none";
+	modal8.style.display = "none";
+	modal9.style.display = "none";
+	modal10.style.display = "none";
   }
 }
 </script>
